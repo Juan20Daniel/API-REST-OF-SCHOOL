@@ -1,0 +1,243 @@
+{
+	"alumno": [
+		{
+			"nControl": 20180117,
+			"nombre": "Carlos Antonio Molinta Rojas",
+			"escuProc": "Cecytem",
+			"promProc": 8.3,
+			"carrera": "Telematica"
+		},
+		{
+			"nControl": 20183021,
+			"nombre": "Daniela Ortis Zamora",
+			"escuProc": "Conalep",
+			"promProc": 7.8,
+			"carrera": "Gastronomia"
+		},
+		{
+			"nControl": 20181118,
+			"nombre": "Juan Carlos Garcia López",
+			"escuProc": "Cecytem",
+			"promProc": 9.4,
+			"carrera": "Ing. Telematica"
+		},
+		{
+			"nControl": 20172344,
+			"nombre": "Abel Rosales Beltran",
+			"escuProc": "Bachillerato",
+			"promProc": 6.1,
+			"carrera": "Gastronomia"
+		},
+		{
+			"nControl": 20186745,
+			"nombre": "Armando Paredes Montaño",
+			"escuProc": "Emiliano Zapata",
+			"promProc": 7,
+			"carrera": "Mecatronica"
+		},
+		{
+			"nControl": 20180117,
+			"nombre": "Maria Magdalena Ramos",
+			"escuProc": "Conalep",
+			"promProc": 10,
+			"carrera": "Medicina"
+		},
+		{
+			"nControl": 20186331,
+			"nombre": "Pablo Escamilla Riñon",
+			"escuProc": "Cecytem",
+			"promProc": 7.9,
+			"carrera": "Gastronomia"
+		},
+		{
+			"nControl": 20183241,
+			"nombre": "Juan Pablo Rojas Morfin",
+			"escuProc": "Emiliano Zapata",
+			"promProc": 8.7,
+			"carrera": "Administración"
+		},
+		{
+			"nControl": 20165224,
+			"nombre": "Monserat Barragan Armas",
+			"escuProc": "Bachillerato",
+			"promProc": 6.3,
+			"carrera": "Sistemas"
+		},
+		{
+			"nControl": 20163422,
+			"nombre": "Eduardo Cisneros Barragan",
+			"escuProc": "Cecytem",
+			"promProc": 8.3,
+			"carrera": "Ing. Telematica"
+		}
+	],
+
+	"docente": [
+		{
+			"gradoAca": "Maestria",
+			"nombre": "Jose Andres Moloña Andrade",
+			"asigBas": "Matematicas"
+		},
+		{
+			"gradoAca": "Bachillerato",
+			"nombre": "Nayeli Rangel Perez Ceras",
+			"asigBas": "Física"
+		},
+		{
+			"gradoAca": "Doctorado",
+			"nombre": "Iddar Lolenzo Delgado",
+			"asigBas": "Maestria"
+		},
+		{
+			"gradoAca": "Licenciatura",
+			"nombre": "Erika Velazquez London",
+			"asigBas": "Ingles"
+		},
+		{
+			"gradoAca": "Maestria",
+			"nombre": "Umberto Rodriges Cerrano",
+			"asigBas": "Matematicas"
+		},
+		{
+			"gradoAca": "Ingeniería",
+			"nombre": "Jose Andres Moloña Andrade",
+			"asigBas": "Sociocultural"
+		},
+		{
+			"gradoAca": "Licenciatura",
+			"nombre": "Jose Manuel Alvarez",
+			"asigBas": "Español"
+		},
+		{
+			"gradoAca": "Bachillerato",
+			"nombre": "Lucas Mendez Castañeda",
+			"asigBas": "Algebra"
+		},
+		{
+			"gradoAca": "Bachillerato",
+			"nombre": "Jose Andres Moloña Andrade",
+			"asigBas": "Educación Física"
+		},
+		{
+			"gradoAca": "bachillerato",
+			"nombre": "Lalo Gusman Ruíz",
+			"asigBas": "Matematicas"
+		}
+	],
+
+	"materia": [
+		{
+			"numMater": 1,
+			"nomMater": "Matematicas",
+			"carAdscr": "Físico Matematico"
+		},
+		{
+			"numMater": 2,
+			"nomMater": "Fícica",
+			"carAdscr": "Físico Matematico"
+		},
+		{
+			"numMater": 3,
+			"nomMater": "Español",
+			"carAdscr": "Psicología"
+		},
+		{
+			"numMater": 4,
+			"nomMater": "Ingles",
+			"carAdscr": "Idiomas"
+		},
+		{
+			"numMater": 5,
+			"nomMater": "Frances",
+			"carAdscr": "Idiomas"
+		},
+		{
+			"numMater": 6,
+			"nomMater": "Computación",
+			"carAdscr": "Sistemas"
+		},
+		{
+			"numMater": 7,
+			"nomMater": "Cocina",
+			"carAdscr": "Gastronomia"
+		},
+		{
+			"numMater": 8,
+			"nomMater": "Tic's",
+			"carAdscr": "Sistemas"
+		},
+		{
+			"numMater": 9,
+			"nomMater": "Programación",
+			"carAdscr": "Sistemas"
+		},
+		{
+			"numMater": 10,
+			"nomMater": "Robotica",
+			"carAdscr": "Mecatronica"
+		},
+		{
+			"numMater": 11,
+			"nomMater": "IoT",
+			"carAdscr": "Mecatronica"
+		},
+		{
+			"numMater": 12,
+			"nomMater": "Artes plásticas",
+			"carAdscr": "Diseño"
+		}
+	],
+
+	"carrera": [
+		{
+			"numCarrera": 1,
+			"nomCarrera": "Diseño",
+			"docenteAca": "Jose Andres Moloña Andrade"
+		},
+		{
+			"numCarrera": 2,
+			"nomCarrera": "Mecatronica",
+			"docenteAca": "Jose Andres Moloña Andrade"
+		},
+		{
+			"numCarrera": 3,
+			"nomCarrera": "Sistemas",
+			"docenteAca": "Umberto Rodriges Cerrano"
+		},
+		{
+			"numCarrera": 4,
+			"nomCarrera": "Gastronomia",
+			"docenteAca": "Nayeli Rangel Perez Ceras"
+		},
+		{
+			"numCarrera": 5,
+			"nomCarrera": "Idiomas",
+			"docenteAca": "Jose Andres Moloña Andrade"
+		},
+		{
+			"numCarrera": 6,
+			"nomCarrera": "Psicología",
+			"docenteAca": "Iddar Lolenzo Delgado"
+		},
+		{
+			"numCarrera": 7,
+			"nomCarrera": "Educación Física",
+			"docenteAca": "Jose Manuel Alvarez"
+		},
+		{
+			"numCarrera": 8,
+			"nomCarrera": "Logística",
+			"docenteAca": "Marivel Guardia Zolar"
+		},
+		{
+			"numCarrera": 9,
+			"nomCarrera": "Criminología",
+			"docenteAca": "Juan Carlos Medina Lopez"
+		},
+		{
+			"numCarrera": 10,
+			"nomCarrera": "Derecho",
+			"docenteAca": "Saul Chocolate Moctezuma"
+		}
+	]
+}

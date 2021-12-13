@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>API REST</title>
+		<meta charset="UTF-8">
+		<meta name="robots" content="index,follow">
+		<meta name="viewport" content="width=device-width inictial-scale=1.0">
+		<meta name="description" content="Consumo de Api Rest con Vue.js">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<div class="container-header">
+					<div class="item-select">
+						<label for="optio">Selecciona una opción</label>
+						<select id="optio" v-model="setOptio" @change="getOption" class="select-opc">
+							<option :value="option.code" v-for="(option, key) of options" :key="key">
+								{{option.opc}}
+							</option>
+						</select>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="countainer-main">
+					<div v-if="setOptio == 'alumno'">
+						<ul class="lists-alumno active">
+							<li class="item"><b>Número de control</b></li>
+							<li class="item"><b>Nombre</b></li>
+							<li class="item"><b>Escuela de procedencia</b></li>
+							<li class="item"><b>Promedio de PD</b></li>
+							<li class="item"><b>Carrera de Adscripción</b></li>
+						</ul>
+						<div v-for="(datos, key) of school" :key="key">
+							<ul class="lists-alumno"> 
+								<li class="item"><b>{{datos.nControl}}</b></li>
+								<li class="item">{{datos.nombre}}</li>
+								<li class="item">{{datos.escuProc}}</li>
+								<li class="item">{{datos.promProc}}</li>
+								<li class="item">{{datos.carrera}}</li>
+							</ul>
+						</div>
+					</div>
+					<div v-if="setOptio == 'docente'">
+						<ul class="lists-docente active">
+							<li class="item"><b>Grado Académico</b></li>
+							<li class="item"><b>Nombre Completo</b></li>
+							<li class="item"><b>Asignatura Base</b></li>
+						</ul>
+						<div v-for="(datos, key) of school" :key="key">
+							<ul class="lists-docente">
+								<li class="item">{{datos.gradoAca}}</li>
+								<li class="item">{{datos.nombre}}</li>
+								<li class="item">{{datos.asigBas}}</li>
+							</ul>
+						</div>
+					</div>
+					<div v-if="setOptio == 'materia'">
+						<ul class="lists-materia active">
+							<li class="item"><b>Número de materia</b></li>
+							<li class="item"><b>Nombre de materia</b></li>
+							<li class="item"><b>Carrera de adscripción</b></li>
+						</ul>
+						<div v-for="(datos, key) of school" :key="key">
+							<ul class="lists-materia">
+								<li class="item"><b>Núm. #{{datos.numMater}}</b></li>
+								<li class="item">{{datos.nomMater}}</li>
+								<li class="item">{{datos.carAdscr}}</li>
+							</ul>
+						</div>
+					</div>
+					<div v-if="setOptio == 'carrera'">
+						<ul class="lists-materia active">
+							<li class="item"><b>Número de carrera</b></li>
+							<li class="item"><b>Nombre de Carrera</b></li>
+							<li class="item"><b>Docente a Cargo</b></li>
+						</ul>
+						<div v-for="(datos, key) of school" :key="key">
+							<ul class="lists-materia">
+								<li class="item"><b>Núm. #{{datos.numCarrera}}</b></li>
+								<li class="item">{{datos.nomCarrera}}</li>
+								<li class="item">{{datos.docenteAca}}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
+<script src="https://unpkg.com/vue@next"></script>
+<script type="text/javascript">
+	const fetchApp = {
+		data:() => ({
+			options: [
+				{
+					code: 'alumno', 
+					opc:"Alumnos"
+				},
+				{
+					code: 'docente', 
+					opc:"Docentes"},
+				{
+					code: 'materia',
+					opc:"Materias"
+				},
+				{
+					code: 'carrera',
+					opc:"Carrera"
+				}
+			],
+			setOptio:'',
+			school:''
+		}),
+		methods: {
+			getOption() {
+				fetch(`http://localhost:3000/${this.setOptio}`)
+				.then(respnse => {
+					if(respnse.ok) {
+						return respnse.json()
+					}else{
+						throw new Error(`Error` + (respnse.status ? `seen a ${respnse.status}`:''))
+					}
+				})
+				.then(respnse => {
+					this.school = respnse
+				})
+				.catch(err => {
+					console.log(err.message || err);
+				})
+			}
+		},
+	};
+	Vue.createApp(fetchApp).mount('#app')
+</script>
+
+
